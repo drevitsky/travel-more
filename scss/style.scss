@@ -1,0 +1,346 @@
+
+        // /travel-more
+@import '_normalize';
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Aleo';
+	src: url("../fonts/aleo-regular-webfont.eot");
+	src: url("../fonts/aleo-regular-webfont.eot") format("embedded-opentype"), 
+	url("../fonts/Aleo-Regular.otf") format("otf"), 
+	url("../fonts/aleo-regular-webfont.ttf") format("ttf"),
+	url("../fonts/aleo-regular-webfont.woff") format("woff"),
+	url("../fonts/aleo-regular-webfont.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+$body-font: 'Josefin Sans', Arial, sans-serif;
+$second-font: 'Aleo', Arial, sans-serif;
+$main-color: #232323;
+$text-color: #e8e8e8;
+$btn-color: #5474fd;
+
+html {
+	min-height: 100%;
+	font-size: 10px;
+}
+body {
+	font:400 1.4rem/1.4 $body-font;
+	font-family: $body-font;
+	color: $text-color;
+	background-color: $main-color;
+	
+}
+.conteiner {
+	width: 1110px;
+	margin: 0 auto;
+
+}
+.section {
+	padding: 50px 0;
+	&--bg {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		color: #fff;
+	}
+	&--why-us {
+		padding: 120px 0;
+	}
+	&--book {
+		padding: 230px 0 100px ;
+	}
+	&--what {
+		padding: 110px 0 200px ;
+		text-align: center;
+	}
+	&__anchor {
+		display: inline-block;
+		outline: none;
+		text-decoration: none;
+		color: #fff;
+	}
+	&__link {
+		text-align: center;
+		max-width: 125px; 
+		margin: 0 auto;
+		&-text {
+			font: 300 14px/1 $body-font;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			opacity: .6;
+		}
+	}
+	&__wrap {
+		display: flex;
+		justify-content: space-beetwen;
+		flex: 0 0 45%;
+		&--mark {
+			width: 100%;
+			justify-content: space-around;
+			position: relative;
+			padding-top: 100px;
+			&:after,
+			&:before {
+				content:'';
+				position: absolute;
+				
+				width: 300px;
+				height: 80px;
+				background: url('../img/arka.png') no-repeat;
+			}
+			&:before {
+				top: 15%;
+				left:19.5%;
+			}
+			&:after {
+				top: 15%;
+				left:53.5%;
+			}
+		}
+	}
+	&__item {
+		// outline: 1px solid red;
+		flex: 0 0 45%;
+
+	}
+	&__info {
+		max-width: 540px;
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+
+	}
+	&__title {
+		font: 400 36px/1 $second-font;
+		margin: 0;
+	}
+	&__text {
+		margin: 55px 25px 45px 0;
+		font: 400 16px/1.6 $body-font;
+		color: $text-color;
+	}
+	&__galery {
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: space-beetwen;
+	}
+	&__picture {
+		width: 350px;
+		height: 220px;
+		overflow: hidden;
+		
+		display: block;
+		&--first {
+
+			margin-left: 65px;
+			margin-bottom: 5px;
+
+		}
+		&--second {
+			align-self: flex-end;
+
+			margin-left: 190px;
+		}
+	}
+	&__btn {
+		display: inline-block;
+		text-align: center;
+		text-transform: uppercase;
+		color: #fff;
+		font: 400 1.6rem/1 $second-font;
+		padding: 20px;
+		text-decoration: none;
+		background-color: $btn-color;
+		width: 225px;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, .5);
+		transition: all 0.4s ease;
+		&:hover {
+			box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, .6);
+		}
+	}
+	&__mark {
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+		align-items: center;
+		&-text {
+			font: 400 3.6rem/1 $second-font;
+		}
+		&-img {
+			width: 60px;
+			height: 60px;
+			&--arka {
+				width: 380px;
+				height: 100px;
+			}
+		}
+	}
+	&__card {
+		padding: 50px 30px;
+		max-width: 540px;
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+		background-color: rgba(35,35,35, 0.7);
+		&-title {
+			font: 400 20px/1 $body-font;
+			text-transform: capitalize;
+		}
+		&-subtitle {
+			font: 400 20px/1 $body-font;
+			text-transform: uppercase;
+		}
+		&--left {
+			margin-left: 55%;
+		}
+		&-img {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			margin: 95px 0 200px;
+		}
+	}
+
+}
+.header {
+	height: 100vh;
+	padding: 25vh;
+	text-align: center;
+
+	&__title {
+		font: 700 48px/1 $body-font;
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		margin: 0;
+	}
+	&__subtitle {
+		font: 400 22px/1.2 $body-font;
+		letter-spacing: 5px;
+		color: #fff;
+		text-align: center;
+		margin: 10px 0 0;
+
+	}
+	&__menu {
+		background-color: $btn-color;
+		width: 100%;
+		padding: 30px 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+	&__logo {
+		font: 700 24px/1.2 $body-font;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $main-color;
+		}
+
+
+	}
+	&__nav {
+			vertical-align: middle;
+			width: calc(100% - 170px);
+			min-width: 540px;
+			display: inline-block;
+			text-align: right;
+		&-list {
+				list-style-type: none;
+				display: inline-block;
+				text-align: right;
+				margin: 0;
+				padding: 0;
+		}
+		&-item {
+				display: inline-block;
+				margin: 0 20px;
+		}
+		&-link {
+				font: 400 14px/1 $second-font;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: #fff;
+				padding: 5px 0;
+				letter-spacing: 1px;
+				outline: none;
+				&:hover,
+				&:focus,
+				&:active {
+						color: $main-color;
+				}
+		}
+	}
+
+}
+.form {
+	margin: 50px 0 120px;
+	text-align: center;
+	font-size: 0;
+
+	&__field {
+		background-color: #fff;
+		display: inline-block;
+		border:none;
+		
+	}
+	&__input {
+		padding: 25px 5px;
+		width: 502px;
+
+		font: 400 14px/1 $body-font;
+		color: $main-color;
+		text-align: center;
+		letter-spacing: 2px;
+		border: 2px solid #fff;
+		vertical-align: center;
+		outline: none;
+		background-color: #fff;
+		&:hover,
+		&:focus {
+			background-color: darken(#fff, 10%);
+			border-color: darken(#fff, 10%);
+		}
+	}
+	&__btn {
+		background-color: $btn-color;
+		border: 2px solid #fff;
+		font: 400 14px/1 $second-font;
+		color: #fff;
+		outline: none;
+		text-transform: uppercase;
+		padding: 15px 50px 25px 30px;
+		vertical-align: top;
+		letter-spacing: 2px;
+		text-align: center;
+		position: relative;
+		&-img {
+			
+			margin-left: 15px;
+
+
+		}
+		// &:after {
+		// 	content: '';
+		// }
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: lighten($btn-color, 6%);
+		}
+	}
+}
+.fa-quote-left {
+	color: $btn-color;
+	font-size: 6rem;
+}
